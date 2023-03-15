@@ -11,6 +11,9 @@
 #
 name: "CodeQL"
 
+env:
+  CODEQL_EXTRACTOR_JAVA_JSP: true
+
 on:
   workflow_dispatch
 
