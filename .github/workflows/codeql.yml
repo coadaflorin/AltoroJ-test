@@ -10,15 +10,14 @@
 # supported CodeQL languages.
 #
 name: "CodeQL"
-
-env:
-  CODEQL_EXTRACTOR_JAVA_JSP: true
-
 on:
   workflow_dispatch
 
 jobs:
   analyze:
+    env:
+      CODEQL_EXTRACTOR_JAVA_RUN_ANNOTATION_PROCESSORS: true
+      CODEQL_EXTRACTOR_JAVA_JSP: true
     name: Analyze
     runs-on: ubuntu-latest
     permissions:
